@@ -1,0 +1,24 @@
+import pandas as pd
+import numpy as np
+
+columns = ['col1', 'col2', 'col3']
+#data = np.random.randn(4, 2)
+# data = [
+#     [1, "lol"],
+#     [2, "lol2"]
+# ]
+data = {
+    'col1' : [1, 2],
+    'col2' : ['lol', 'lol2']
+}
+#print (data)
+df = pd.DataFrame(data,columns=columns)
+
+#print (df)
+
+data = {
+    'col1' : [1, 2],
+    'col3' : ['lol', 'lol2']
+}
+df=df.append(pd.DataFrame(data), sort=True)
+print (df['col1'].iloc[0])
